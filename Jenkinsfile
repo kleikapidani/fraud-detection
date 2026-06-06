@@ -26,7 +26,13 @@ pipeline {
 
             post {
                 always {
-                    junit '**/target/surefire-reports/*.xml'
+                    script {
+                            if (fileExists('target/surefire-reports')) {
+                                junit '**/target/surefire-reports/*.xml'
+                            } else {
+                                echo 'No test reports found, skipping JUnit step'
+                            }
+                    }
                 }
             }
         }
