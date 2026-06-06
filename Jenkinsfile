@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/kleikapidani/fraud-detection.git'
+                git branch: 'main', url: 'https://github.com/kleikapidani/fraud-detection.git'
             }
         }
 
