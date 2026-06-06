@@ -7,5 +7,6 @@ public class FraudAlertJob {
         System.out.println("Test");
         System.out.println("Test");
         System.out.println("Test");
+        System.out.println("Test");
     }
 }
